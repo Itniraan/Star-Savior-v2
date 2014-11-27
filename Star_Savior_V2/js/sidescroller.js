@@ -8,8 +8,6 @@
 /// <reference path="objects/star.ts" />
 /// <reference path="objects/scoreboard.ts" />
 /// <reference path="objects/bullet.ts" />
-
-
 /**
 File Name: sidescroller.ts
 Author: Blake Murdock
@@ -17,31 +15,29 @@ Website Name: Main TypeScript file for Star Savior Side-Scrolling Arcade Game
 Purpose: This file contains initialization, preload, and state machine for the
 arcade game
 */
-
-var stage: createjs.Stage;
-var game: createjs.Container;
+var stage;
+var game;
 var queue;
 
-
-
 // Game Objects
-var plane: objects.Plane;
-var star: objects.Star;
-var lava: objects.Lava;
-var scoreboard: objects.scoreBoard;
-var bullet: objects.Bullet;
+var plane;
+var star;
+var lava;
+var scoreboard;
+var bullet;
 
 // Enemy Array
 var enemies = [];
 var bullets = [];
 
 // State variables
-var currentState: number;
+var currentState;
 var currentStateFunction;
 
 // Pre-load function - this loads all of the assets ahead of time
-function preload(): void {
+function preload() {
     queue = new createjs.LoadQueue();
+
     // Load the sound plugin
     queue.installPlugin(createjs.Sound);
     createjs.Sound.alternateExtensions = ["mp3"];
@@ -65,12 +61,13 @@ function preload(): void {
 }
 
 // Initialization function - This is where the stage gets created, everything gets set up
-function init(): void {
+function init() {
     stage = new createjs.Stage(document.getElementById("gameCanvas"));
     stage.enableMouseOver(20);
     createjs.Ticker.setFPS(60);
     createjs.Ticker.addEventListener("tick", gameLoop);
     optimizeForMobile();
+
     // When game begins, current state will be opening menu (MENU_STATE)
     currentState = constants.MENU_STATE;
     changeState(currentState);
@@ -84,16 +81,15 @@ function optimizeForMobile() {
 }
 
 // Game Loop
-function gameLoop(event): void {
+function gameLoop(event) {
     // Check current state, then update stage
     currentStateFunction();
     stage.update();
 }
 
-// This is the state machine function, that allows the game to switch to different 
+// This is the state machine function, that allows the game to switch to different
 // screens, or states, depending on where the player is in the game
-function changeState(state: number): void {
-    // Launch Various "screens"
+function changeState(state) {
     switch (state) {
         case constants.MENU_STATE:
             // instantiate menu screen
@@ -127,8 +123,10 @@ function changeState(state: number): void {
             break;
         case constants.GAME_OVER_STATE:
             currentStateFunction = states.gameOverState;
+
             // instantiate game over screen
             states.gameOver();
             break;
     }
 }
+//# sourceMappingURL=sidescroller.js.map

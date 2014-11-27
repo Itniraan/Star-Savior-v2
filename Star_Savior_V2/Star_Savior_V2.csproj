@@ -105,9 +105,13 @@
     <TypeScriptCompile Include="js\objects\scoreBoard.ts" />
     <TypeScriptCompile Include="js\objects\star.ts" />
     <TypeScriptCompile Include="js\sidescroller.ts" />
+    <TypeScriptCompile Include="js\states\finalBossScreen.ts" />
     <TypeScriptCompile Include="js\states\gameOverScreen.ts" />
     <TypeScriptCompile Include="js\states\mainMenuScreen.ts" />
     <TypeScriptCompile Include="js\states\playGameLevelOneScreen.ts" />
+    <TypeScriptCompile Include="js\states\playGameLevelThreeScreen.ts" />
+    <TypeScriptCompile Include="js\states\playGameLevelTwoScreen.ts" />
+    <TypeScriptCompile Include="js\states\winScreen.ts" />
     <TypeScriptCompile Include="js\typings\createjs-lib\createjs-lib.d.ts" />
     <TypeScriptCompile Include="js\typings\createjs\createjs.d.ts" />
     <TypeScriptCompile Include="js\typings\easeljs\easeljs.d.ts" />

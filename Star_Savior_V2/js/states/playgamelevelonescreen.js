@@ -12,9 +12,10 @@ Author: Blake Murdock
 Website Name: This is the game play screen state for Star Savior
 Purpose: This file contains all of the elements of the game play screen
 */
-module states {
+var states;
+(function (states) {
     // Game loop function, that makes sure everything runs smoothly
-    export function playLevelOneState() {
+    function playLevelOneState() {
         lava.update();
         star.update();
 
@@ -46,16 +47,17 @@ module states {
             changeState(currentState);
         }
     }
+    states.playLevelOneState = playLevelOneState;
 
     // play state Function
-    export function playLevelOne(): void {
+    function playLevelOne() {
         game = new createjs.Container();
+
         // Set mouse cursor to none (avatar will take place of cursor
         stage.cursor = "none";
         lava = new objects.Lava(stage, game);
         star = new objects.Star(stage, game);
         plane = new objects.Plane(stage, game);
-        
 
         for (var count = 0; count < constants.ENEMY_NUM; count++) {
             enemies[count] = new objects.Enemy(stage, game);
@@ -64,6 +66,7 @@ module states {
         scoreboard = new objects.scoreBoard(stage, game);
 
         stage.addChild(game);
-
     }
-} 
+    states.playLevelOne = playLevelOne;
+})(states || (states = {}));
+//# sourceMappingURL=playgamelevelonescreen.js.map
