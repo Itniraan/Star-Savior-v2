@@ -18,7 +18,7 @@ var states;
     function playLevelThreeState() {
         lava.update();
         star.update();
-
+        createjs.Sound.play('level1Soundtrack', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
         for (var count = 0; count < constants.ENEMY_NUM; count++) {
             enemies[count].update();
         }

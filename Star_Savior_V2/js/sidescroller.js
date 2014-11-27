@@ -76,6 +76,7 @@ function preload() {
 // Initialization function - This is where the stage gets created, everything gets set up
 function init() {
     stage = new createjs.Stage(document.getElementById("gameCanvas"));
+    game = new createjs.Container();
     stage.enableMouseOver(20);
     createjs.Ticker.setFPS(60);
     createjs.Ticker.addEventListener("tick", gameLoop);
@@ -83,7 +84,7 @@ function init() {
 
     // When game begins, current state will be opening menu (MENU_STATE)
     //scoreboard = new objects.scoreBoard(stage, game);
-    currentState = constants.PLAY_STATE_LEVEL_ONE;
+    currentState = constants.MENU_STATE;
     changeState(currentState);
 }
 

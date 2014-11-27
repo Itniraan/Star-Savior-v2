@@ -70,7 +70,7 @@ module states {
             enemies[count] = new objects.Enemy(stage, game);
         }
 
-        //scoreboard = new objects.scoreBoard(stage, game);
+        scoreboard = new objects.scoreBoard(stage, game);
 
         stage.addChild(game);
 

@@ -18,7 +18,7 @@ var states;
     function playLevelTwoState() {
         space.update();
         star.update();
-
+        createjs.Sound.play('level2Soundtrack', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
         for (var count = 0; count < constants.ENEMY_NUM; count++) {
             enemies[count].update();
         }
@@ -46,6 +46,13 @@ var states;
             currentState = constants.GAME_OVER_STATE;
             changeState(currentState);
         }
+
+        if (scoreboard.score == 2500) {
+            space.destroy();
+
+            currentState = constants.PLAY_STATE_LEVEL_THREE;
+            changeState(currentState);
+        }
     }
     states.playLevelTwoState = playLevelTwoState;
 
@@ -63,7 +70,8 @@ var states;
             enemies[count] = new objects.Enemy(stage, game);
         }
 
-        //scoreboard = new objects.scoreBoard(stage, game);
+        scoreboard = new objects.scoreBoard(stage, game);
+
         stage.addChild(game);
     }
     states.playLevelTwo = playLevelTwo;

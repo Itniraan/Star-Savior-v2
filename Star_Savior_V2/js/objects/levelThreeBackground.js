@@ -11,8 +11,8 @@ var objects;
         function levelThreeBackground(stage, game) {
             this.stage = stage;
             this.game = game;
-            this.image = new createjs.Bitmap(queue.getResult("spaceLevelTwo"));
-            this.image2 = new createjs.Bitmap(queue.getResult("spaceLevelTwo"));
+            this.image = new createjs.Bitmap(queue.getResult("spaceLevelThree"));
+            this.image2 = new createjs.Bitmap(queue.getResult("spaceLevelThree"));
             this.width = this.image.getBounds().width;
             this.height = this.image.getBounds().height;
             this.dx = 5;
