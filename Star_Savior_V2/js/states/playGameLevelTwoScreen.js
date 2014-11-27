@@ -63,8 +63,7 @@ var states;
             enemies[count] = new objects.Enemy(stage, game);
         }
 
-        scoreboard = new objects.scoreBoard(stage, game);
-
+        //scoreboard = new objects.scoreBoard(stage, game);
         stage.addChild(game);
     }
     states.playLevelTwo = playLevelTwo;
