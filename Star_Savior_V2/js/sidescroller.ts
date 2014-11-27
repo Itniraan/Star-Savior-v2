@@ -54,6 +54,9 @@ function preload(): void {
         { id: "pickupAudio", src: "assets/audio/pickupStar.mp3" },
         { id: "lifeUpAudio", src: "assets/audio/lifeUp.mp3" },
         { id: "shootAudio", src: "assets/audio/Laser_Shoot.mp3" },
+		{ id: "level1Soundtrack", src: "assets/audio/level1Soundtrack.mp3" },
+		{ id: "level2Soundtrack", src: "assets/audio/level2Soundtrack.mp3" },
+		{ id: "level3Soundtrack", src: "assets/audio/level3Soundtrack.mp3" },
         // Sprite Assets
         { id: "plane", src: "assets/img/Endymion_Sprite.png" },
         { id: "lava", src: "assets/img/lava-tileset.png" },
@@ -61,6 +64,10 @@ function preload(): void {
         { id: "bullet", src: "assets/img/bullet-basic.png" },
         { id: "enemy", src: "assets/img/Einhander_2.png" },
         { id: "star", src: "assets/img/star.png" },
+		{ id: "spaceLevelThree", src: "assets/img/level3Background.png" },
+		{ id: "enemy1", src: "assets/img/enemy1.jpg" },
+		{ id: "enemy2", src: "assets/img/enemy2.jpg" },
+		{ id: "enemy3", src: "assets/img/enemy3.jpg" },
         // Button Assets
         { id: "playButton", src: "assets/img/playButton.png" },
         { id: "instructionsButton", src: "assets/img/instructionsButton.png" },
