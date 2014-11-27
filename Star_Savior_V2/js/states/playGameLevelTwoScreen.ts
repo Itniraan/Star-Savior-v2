@@ -45,6 +45,13 @@ module states {
             currentState = constants.GAME_OVER_STATE;
             changeState(currentState);
         }
+
+		if (scoreboard.score == 2500) {
+            space.destroy();
+
+            currentState = constants.PLAY_STATE_LEVEL_THREE;
+            changeState(currentState);
+        }
     }
 
     // play state Function
