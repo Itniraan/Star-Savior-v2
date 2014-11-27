@@ -29,6 +29,7 @@ var plane: objects.Plane;
 var star: objects.Star;
 var lava: objects.Lava;
 var space: objects.levelTwoBackground;
+var crazySpace: objects.levelThreeBackground;
 var scoreboard: objects.scoreBoard;
 var bullet: objects.Bullet;
 
@@ -84,6 +85,7 @@ function init(): void {
     createjs.Ticker.addEventListener("tick", gameLoop);
     optimizeForMobile();
     // When game begins, current state will be opening menu (MENU_STATE)
+    //scoreboard = new objects.scoreBoard(stage, game);
     currentState = constants.PLAY_STATE_LEVEL_ONE;
     changeState(currentState);
 }

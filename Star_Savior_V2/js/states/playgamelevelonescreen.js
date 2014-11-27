@@ -47,7 +47,7 @@ var states;
             changeState(currentState);
         }
 
-        if (scoreboard.score == 1500) {
+        if (scoreboard.score == 500) {
             lava.destroy();
 
             currentState = constants.PLAY_STATE_LEVEL_TWO;
@@ -70,8 +70,7 @@ var states;
             enemies[count] = new objects.Enemy(stage, game);
         }
 
-        scoreboard = new objects.scoreBoard(stage, game);
-
+        //scoreboard = new objects.scoreBoard(stage, game);
         stage.addChild(game);
     }
     states.playLevelOne = playLevelOne;
