@@ -23,6 +23,7 @@ var queue;
 var plane;
 var star;
 var lava;
+var space;
 var scoreboard;
 var bullet;
 
@@ -73,7 +74,7 @@ function init() {
     optimizeForMobile();
 
     // When game begins, current state will be opening menu (MENU_STATE)
-    currentState = constants.MENU_STATE;
+    currentState = constants.PLAY_STATE_LEVEL_ONE;
     changeState(currentState);
 }
 

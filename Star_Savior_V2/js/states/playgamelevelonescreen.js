@@ -46,6 +46,13 @@ var states;
             currentState = constants.GAME_OVER_STATE;
             changeState(currentState);
         }
+
+        if (scoreboard.score == 1500) {
+            lava.destroy();
+
+            currentState = constants.PLAY_STATE_LEVEL_TWO;
+            changeState(currentState);
+        }
     }
     states.playLevelOneState = playLevelOneState;
 

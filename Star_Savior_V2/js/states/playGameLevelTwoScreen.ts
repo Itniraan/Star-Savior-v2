@@ -15,7 +15,7 @@ Purpose: This file contains all of the elements of the game play screen
 module states {
     // Game loop function, that makes sure everything runs smoothly
     export function playLevelTwoState() {
-        lava.update();
+        space.update();
         star.update();
 
         for (var count = 0; count < constants.ENEMY_NUM; count++) {
@@ -35,7 +35,7 @@ module states {
             states.getHighScore(scoreboard.score);
             stage.removeChild(game);
             plane.destroy();
-            lava.destroy();
+            space.destroy();
             star.destroy();
 
             game.removeAllChildren();
