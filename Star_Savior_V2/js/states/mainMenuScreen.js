@@ -7,28 +7,28 @@ Author: Blake Murdock
 Website Name: This is the main menu screen state for Star Savior
 Purpose: This file contains all of the elements of the main menu screen (start game, instructions)
 */
-module states {
+var states;
+(function (states) {
     // Game Loop function, updates lava in background
-    export function menuState() {
+    function menuState() {
         lava.update();
     }
+    states.menuState = menuState;
 
     // main menu function, that sets up where everything is on the canvas, and the event listeners
-    export function menu() {
+    function menu() {
         // Buttons
-        var playButton: createjs.Bitmap;
-        var instructionsButton: createjs.Bitmap;
-        var okButton: createjs.Bitmap;
+        var playButton;
+        var instructionsButton;
+        var okButton;
 
         // Text and labels
-        var instructionsMessage: string = "In this game, your objective is to avoid the enemy fighters, " 
-            + "and save the stars that have been trapped in a volcano. Gain another life "
-            + "everytime you win 1000 points, up to 5000 points. See how many points you can get!";
-        var instructionsText: createjs.Text;
-        var welcomeMessage: string = "Welcome to Star Savior!";
-        var welcomeText: createjs.Text;
-        var titleMessage: string = "Star Savior";
-        var titleLabel: objects.Label;
+        var instructionsMessage = "In this game, your objective is to avoid the enemy fighters, " + "and save the stars that have been trapped in a volcano. Gain another life " + "everytime you win 1000 points, up to 5000 points. See how many points you can get!";
+        var instructionsText;
+        var welcomeMessage = "Welcome to Star Savior!";
+        var welcomeText;
+        var titleMessage = "Star Savior";
+        var titleLabel;
 
         // initialize new objects
         game = new createjs.Container();
@@ -57,7 +57,7 @@ module states {
         welcomeText.visible = false;
         titleLabel = new objects.Label(284, 50, titleMessage);
         titleLabel.font = "50px Consolas";
-        
+
         // set up event listeners for all buttons
         playButton.addEventListener("mouseover", function () {
             playButton.alpha = 0.5;
@@ -103,6 +103,7 @@ module states {
             welcomeText.visible = false;
             okButton.visible = false;
         });
+
         // Add all objects to canvas
         game.addChild(titleLabel);
         game.addChild(playButton);
@@ -111,11 +112,11 @@ module states {
         game.addChild(instructionsText);
         game.addChild(okButton);
 
-
         // Set mouse cursor to default cursor
         stage.cursor = "default";
-        
+
         stage.addChild(game);
     }
-
-}
+    states.menu = menu;
+})(states || (states = {}));
+//# sourceMappingURL=mainMenuScreen.js.map
