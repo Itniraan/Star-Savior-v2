@@ -68,6 +68,7 @@ module states {
         playButton.addEventListener("click", function () {
             // If play button is clicked, destory all objects and start game
             createjs.Sound.play('gameStartAudio');
+			createjs.Sound.play('level1Soundtrack', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
             lava.destroy();
             game.removeAllChildren;
             game.removeAllEventListeners;

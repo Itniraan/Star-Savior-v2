@@ -17,7 +17,7 @@ module states {
     export function playLevelTwoState() {
         space.update();
         star.update();
-
+		createjs.Sound.play('level2Soundtrack', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
         for (var count = 0; count < constants.ENEMY_NUM; count++) {
             enemies[count].update();
         }
