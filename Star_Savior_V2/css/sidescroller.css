@@ -1,0 +1,18 @@
+﻿/*
+    File Name: sidescroller.css
+    Author: Blake Murdock
+    Website Name: Main CSS file for Star Savior Side-Scrolling Arcade Game
+    Purpose: This file contains all of the CSS styles for the Star Savior Arcade Game
+*/
+
+small {
+    margin-left: 25%;
+    font-size: small;
+    color: black;
+}
+
+canvas {
+    border: 1px solid black;
+    margin-left: 25%;
+    /*cursor: none;*/
+}
