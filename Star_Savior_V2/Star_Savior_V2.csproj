@@ -102,6 +102,8 @@
     <TypeScriptCompile Include="js\objects\enemy.ts" />
     <TypeScriptCompile Include="js\objects\label.ts" />
     <TypeScriptCompile Include="js\objects\lava.ts" />
+    <TypeScriptCompile Include="js\objects\levelThreeBackground.ts" />
+    <TypeScriptCompile Include="js\objects\levelTwoBackground.ts" />
     <TypeScriptCompile Include="js\objects\plane.ts" />
     <TypeScriptCompile Include="js\objects\scoreBoard.ts" />
     <TypeScriptCompile Include="js\objects\star.ts" />

@@ -1,6 +1,6 @@
 ﻿/**
 File Name: constants.ts
-Author: Blake Murdock
+Author: Blake Murdock and Mallory Steele
 Website Name: Constants class for Star Savior Side-Scrolling Arcade Game
 Purpose: This file contains all constant variables that will be used in the game
 */

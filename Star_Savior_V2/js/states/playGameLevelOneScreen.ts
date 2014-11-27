@@ -8,7 +8,7 @@
 /// <reference path="../objects/scoreboard.ts" />
 /**
 File Name: playGameLevelOne.ts
-Author: Blake Murdock
+Author: Blake Murdock and Mallory Steele
 Website Name: This is the game play screen state for Star Savior
 Purpose: This file contains all of the elements of the game play screen
 */

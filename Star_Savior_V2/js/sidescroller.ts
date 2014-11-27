@@ -12,7 +12,7 @@
 
 /**
 File Name: sidescroller.ts
-Author: Blake Murdock
+Author: Blake Murdock and Mallory Steele
 Website Name: Main TypeScript file for Star Savior Side-Scrolling Arcade Game
 Purpose: This file contains initialization, preload, and state machine for the
 arcade game
@@ -47,16 +47,20 @@ function preload(): void {
     createjs.Sound.alternateExtensions = ["mp3"];
     queue.addEventListener("complete", init);
     queue.loadManifest([
+        // Audio Assets
         { id: "gameStartAudio", src: "assets/audio/gameStart.mp3" },
         { id: "explosionAudio", src: "assets/audio/Explosion.mp3" },
         { id: "pickupAudio", src: "assets/audio/pickupStar.mp3" },
         { id: "lifeUpAudio", src: "assets/audio/lifeUp.mp3" },
         { id: "shootAudio", src: "assets/audio/Laser_Shoot.mp3" },
+        // Sprite Assets
         { id: "plane", src: "assets/img/Endymion_Sprite.png" },
         { id: "lava", src: "assets/img/lava-tileset.png" },
+        { id: "spaceLevelTwo", src: "assets/img/level2Background.png" },
         { id: "bullet", src: "assets/img/bullet-basic.png" },
         { id: "enemy", src: "assets/img/Einhander_2.png" },
         { id: "star", src: "assets/img/star.png" },
+        // Button Assets
         { id: "playButton", src: "assets/img/playButton.png" },
         { id: "instructionsButton", src: "assets/img/instructionsButton.png" },
         { id: "okButton", src: "assets/img/okButton.png" },
