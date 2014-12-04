@@ -61,7 +61,7 @@ function preload() {
         { id: "bullet", src: "assets/img/bullet-basic.png" },
         { id: "enemy", src: "assets/img/Einhander_2.png" },
         { id: "star", src: "assets/img/star.png" },
-        { id: "spaceLevelThree", src: "assets/img/level3Background.jpg" },
+        { id: "spaceLevelThree", src: "assets/img/level3Background.png" },
         { id: "enemy1", src: "assets/img/enemy1.png" },
         { id: "enemy2", src: "assets/img/enemy2.png" },
         { id: "enemy3", src: "assets/img/enemy3.png" },

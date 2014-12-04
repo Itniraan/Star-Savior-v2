@@ -17,8 +17,8 @@ var objects;
         }
         // Function to fire bullet. Sets where bullet will begin, and adds it to stage
         Bullet.prototype.fireBullet = function () {
-            this.image.x = stage.mouseX + 5;
-            this.image.y = stage.mouseY + 5;
+            this.image.x = 65;
+            this.image.y = plane.image.y + 5;
             game.addChild(this.image);
         };
 

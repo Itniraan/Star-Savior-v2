@@ -18,7 +18,7 @@ var objects;
             this.image.regY = this.height * 0.5;
             this.dx = 5;
 
-            this.image.addEventListener("click", function (e) {
+            this.stage.addEventListener("click", function (e) {
                 createjs.Sound.play("shootAudio");
                 bullet = new objects.Bullet(stage, game);
                 bullets.push(bullet);
@@ -31,7 +31,7 @@ var objects;
         }
         // Function to update position of plane.
         Plane.prototype.update = function () {
-            this.image.x = stage.mouseX;
+            this.image.x = 60;
             this.image.y = stage.mouseY;
         };
 
