@@ -66,9 +66,10 @@ function preload(): void {
         { id: "enemy", src: "assets/img/Einhander_2.png" },
         { id: "star", src: "assets/img/star.png" },
 		{ id: "spaceLevelThree", src: "assets/img/level3Background.png" },
-		{ id: "enemy1", src: "assets/img/enemy1.jpg" },
-		{ id: "enemy2", src: "assets/img/enemy2.jpg" },
-		{ id: "enemy3", src: "assets/img/enemy3.jpg" },
+		{ id: "enemy1", src: "assets/img/enemy1.png" },
+		{ id: "enemy2", src: "assets/img/enemy2.png" },
+		{ id: "enemy3", src: "assets/img/enemy3.png" },
+		{ id: "bossMonster", src: "assets/img/bossMonster.png" },
         // Button Assets
         { id: "playButton", src: "assets/img/playButton.png" },
         { id: "instructionsButton", src: "assets/img/instructionsButton.png" },
