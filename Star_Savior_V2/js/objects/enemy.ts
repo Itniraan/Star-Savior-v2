@@ -21,7 +21,7 @@ module objects {
             } else if (currentState == constants.PLAY_STATE_LEVEL_TWO) {
                 this.image = new createjs.Bitmap(queue.getResult("enemy1"));
             } else if (currentState == constants.PLAY_STATE_LEVEL_THREE) {
-                this.image = new createjs.Bitmap(queue.getResult("enemy"));
+                this.image = new createjs.Bitmap(queue.getResult("enemy3"));
             }
             this.width = this.image.getBounds().width;
             this.height = this.image.getBounds().height;

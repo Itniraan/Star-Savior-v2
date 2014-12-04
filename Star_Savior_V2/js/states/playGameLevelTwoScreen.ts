@@ -50,6 +50,9 @@ module states {
             space.destroy();
             plane.destroy();
             star.destroy();
+            for (var count = 0; count < constants.ENEMY_NUM; count++) {
+                enemies[count].destroy();
+            }
 
             currentState = constants.PLAY_STATE_LEVEL_THREE;
             changeState(currentState);

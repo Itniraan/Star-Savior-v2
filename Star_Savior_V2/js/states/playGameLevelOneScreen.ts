@@ -75,6 +75,7 @@ module states {
 
         scoreboard = new objects.scoreBoard(stage, game);
 
+
         stage.addChild(game);
 
     }

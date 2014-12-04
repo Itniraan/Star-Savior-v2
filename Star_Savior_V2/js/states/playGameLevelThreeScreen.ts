@@ -22,7 +22,7 @@ module states {
             enemies[count].update();
         }
         managers.collisionCheck();
-        console.log(managers.collisionCheck());
+        //console.log(managers.collisionCheck());
         for (var i = 0; i < bullets.length; i++) {
             bullets[i].bulletUpdate();
         }
