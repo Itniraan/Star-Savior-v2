@@ -11,12 +11,17 @@ var objects;
         function Enemy(stage, game) {
             this.stage = stage;
             this.game = game;
-            this.image = new createjs.Bitmap(queue.getResult("enemy"));
+            if (currentState == constants.PLAY_STATE_LEVEL_ONE) {
+                this.image = new createjs.Bitmap(queue.getResult("enemy"));
+            } else if (currentState == constants.PLAY_STATE_LEVEL_TWO) {
+                this.image = new createjs.Bitmap(queue.getResult("enemy1"));
+            } else if (currentState == constants.PLAY_STATE_LEVEL_THREE) {
+                this.image = new createjs.Bitmap(queue.getResult("enemy"));
+            }
             this.width = this.image.getBounds().width;
             this.height = this.image.getBounds().height;
             this.image.regX = this.width * 0.5;
             this.image.regY = this.height * 0.5;
-
             game.addChild(this.image);
             this.reset();
         }
