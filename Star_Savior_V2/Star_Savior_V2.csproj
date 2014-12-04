@@ -71,7 +71,7 @@
     <Content Include="assets\img\enemy3.jpg" />
     <Content Include="assets\img\enemy3.png" />
     <Content Include="assets\img\level2Background.png" />
-    <Content Include="assets\img\level3Background.jpg" />
+    <Content Include="assets\img\level3Background.png" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
