@@ -47,8 +47,10 @@ var states;
             changeState(currentState);
         }
 
-        if (scoreboard.score == 2500) {
+        if (scoreboard.score == 500) {
             space.destroy();
+            plane.destroy();
+            star.destroy();
 
             currentState = constants.PLAY_STATE_LEVEL_THREE;
             changeState(currentState);

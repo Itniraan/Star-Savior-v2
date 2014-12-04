@@ -15,9 +15,9 @@ Purpose: This file contains all of the elements of the game play screen
 module states {
     // Game loop function, that makes sure everything runs smoothly
     export function playLevelThreeState() {
-        lava.update();
+        crazySpace.update();
         star.update();
-		createjs.Sound.play('level1Soundtrack', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
+		createjs.Sound.play('level3Soundtrack', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
         for (var count = 0; count < constants.ENEMY_NUM; count++) {
             enemies[count].update();
         }
@@ -35,7 +35,7 @@ module states {
             states.getHighScore(scoreboard.score);
             stage.removeChild(game);
             plane.destroy();
-            lava.destroy();
+            crazySpace.destroy();
             star.destroy();
 
             game.removeAllChildren();
