@@ -14,6 +14,8 @@ Purpose: This file contains all of the elements of the game play screen
 */
 var states;
 (function (states) {
+    var levelThreeText;
+
     // Game loop function, that makes sure everything runs smoothly
     function playLevelThreeState() {
         crazySpace.update();
@@ -58,6 +60,19 @@ var states;
         crazySpace = new objects.levelThreeBackground(stage, game);
         star = new objects.Star(stage, game);
         plane = new objects.Plane(stage, game);
+
+        levelThreeText = new createjs.Text("Level Three", constants.LABEL_FONT, constants.LABEL_COLOUR);
+        levelThreeText.x = stage.canvas.width / 4 + 60;
+        levelThreeText.y = stage.canvas.height / 4 + 20;
+        createjs.Ticker.addEventListener("tick", tick);
+        function tick(event) {
+            // move 100 pixels per second (elapsedTimeInMS / 1000msPerSecond * pixelsPerSecond):
+            levelThreeText.y += event.delta / 1000 * 100;
+
+            // this will log a steadily increasing value:
+            console.log("total time: " + createjs.Ticker.getTime());
+        }
+        game.addChild(levelThreeText);
 
         for (var count = 0; count < constants.ENEMY_NUM; count++) {
             enemies[count] = new objects.Enemy(stage, game);

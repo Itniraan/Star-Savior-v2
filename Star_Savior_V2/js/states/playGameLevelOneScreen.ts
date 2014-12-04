@@ -13,6 +13,7 @@ Website Name: This is the game play screen state for Star Savior
 Purpose: This file contains all of the elements of the game play screen
 */
 module states {
+    var levelOneText: createjs.Text;
     // Game loop function, that makes sure everything runs smoothly
     export function playLevelOneState() {
         lava.update();
@@ -68,6 +69,17 @@ module states {
         star = new objects.Star(stage, game);
         plane = new objects.Plane(stage, game);
         
+        levelOneText = new createjs.Text("Level One", constants.LABEL_FONT, constants.LABEL_COLOUR);
+        levelOneText.x = stage.canvas.width / 4 + 60;
+        levelOneText.y = stage.canvas.height / 4 + 20;
+        createjs.Ticker.addEventListener("tick", tick);
+        function tick(event) {
+            // move 100 pixels per second (elapsedTimeInMS / 1000msPerSecond * pixelsPerSecond):
+            levelOneText.y += event.delta / 1000 * 100;
+            // this will log a steadily increasing value:
+            console.log("total time: " + createjs.Ticker.getTime());
+        }
+        game.addChild(levelOneText);
 
         for (var count = 0; count < constants.ENEMY_NUM; count++) {
             enemies[count] = new objects.Enemy(stage, game);
