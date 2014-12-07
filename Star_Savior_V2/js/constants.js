@@ -21,5 +21,7 @@ var constants;
     constants.LABEL_COLOUR = "#FFFFFF";
     constants.PLAYER_LIVES = 3;
     constants.BULLET_SPEED = 5;
+    constants.PLAYER_SCORE = 0;
+    constants.PLAYER_LIVES = 3;
 })(constants || (constants = {}));
 //# sourceMappingURL=constants.js.map

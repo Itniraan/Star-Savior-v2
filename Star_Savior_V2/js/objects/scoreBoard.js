@@ -23,7 +23,7 @@ var objects;
         }
         // Functon to update score on screen
         scoreBoard.prototype.update = function () {
-            this.labelString = "Lives: " + this.lives.toString() + " Score: " + this.score.toString();
+            this.labelString = "Lives: " + constants.PLAYER_LIVES.toString() + " Score: " + constants.PLAYER_SCORE.toString();
             this.label.text = this.labelString;
         };
         return scoreBoard;

@@ -19,4 +19,6 @@ module constants {
     export var LABEL_COLOUR = "#FFFFFF";
     export var PLAYER_LIVES = 3;
     export var BULLET_SPEED = 5;
+    export var PLAYER_SCORE = 0;
+    export var PLAYER_LIVES = 3;
 } 

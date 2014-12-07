@@ -18,12 +18,14 @@ var objects;
             this.image.regY = this.height * 0.5;
             this.dx = 5;
 
-            this.stage.addEventListener("click", function (e) {
-                createjs.Sound.play("shootAudio");
-                bullet = new objects.Bullet(stage, game);
-                bullets.push(bullet);
-                bullets[bullets.length - 1].fireBullet();
-            });
+            if (currentState != constants.MENU_STATE && currentState != constants.GAME_OVER_STATE) {
+                this.stage.addEventListener("click", function (e) {
+                    createjs.Sound.play("shootAudio");
+                    bullet = new objects.Bullet(stage, game);
+                    bullets.push(bullet);
+                    bullets[bullets.length - 1].fireBullet();
+                });
+            }
 
             game.addChild(this.image);
             // Play engine sound forever

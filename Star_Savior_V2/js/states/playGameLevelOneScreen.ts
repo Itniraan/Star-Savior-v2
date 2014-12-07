@@ -32,8 +32,9 @@ module states {
         scoreboard.update();
 
         // If lives is 0 or lower, destroy all objects and go to gameover screen
-        if (scoreboard.lives <= 0) {
-            states.getHighScore(scoreboard.score);
+        if (constants.PLAYER_LIVES <= 0) {
+            states.getHighScore(constants.PLAYER_SCORE);
+            createjs.Sound.stop();
             stage.removeChild(game);
             plane.destroy();
             lava.destroy();
@@ -47,7 +48,9 @@ module states {
             changeState(currentState);
         }
 
-        if (scoreboard.score == 500) {
+        if (constants.PLAYER_SCORE == 500) {
+            createjs.Sound.stop();
+            createjs.Sound.play('level2Soundtrack', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
             lava.destroy();
             plane.destroy();
             star.destroy();

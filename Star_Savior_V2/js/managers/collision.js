@@ -51,27 +51,27 @@ var managers;
         point2.x = star.image.x;
         point2.y = star.image.y;
         if (distance(point1, point2) < ((plane.height * 0.5) + (star.height * 0.5))) {
-            scoreboard.score += 100;
-            switch (scoreboard.score) {
+            constants.PLAYER_SCORE += 100;
+            switch (constants.PLAYER_SCORE) {
                 case 1000:
                     createjs.Sound.play('lifeUpAudio');
-                    scoreboard.lives += 1;
+                    constants.PLAYER_LIVES += 1;
                     break;
                 case 2000:
                     createjs.Sound.play('lifeUpAudio');
-                    scoreboard.lives += 1;
+                    constants.PLAYER_LIVES += 1;
                     break;
                 case 3000:
                     createjs.Sound.play('lifeUpAudio');
-                    scoreboard.lives += 1;
+                    constants.PLAYER_LIVES += 1;
                     break;
                 case 4000:
                     createjs.Sound.play('lifeUpAudio');
-                    scoreboard.lives += 1;
+                    constants.PLAYER_LIVES += 1;
                     break;
                 case 5000:
                     createjs.Sound.play('lifeUpAudio');
-                    scoreboard.lives += 1;
+                    constants.PLAYER_LIVES += 1;
                     break;
                 default:
                     createjs.Sound.play("pickupAudio");
@@ -93,7 +93,7 @@ var managers;
         p2.y = enemy.image.y;
         if (distance(p1, p2) <= ((plane.height * 0.5) + (enemy.height * 0.5))) {
             createjs.Sound.play("explosionAudio");
-            scoreboard.lives -= 1;
+            constants.PLAYER_LIVES -= 1;
             enemy.reset();
         }
     }
@@ -124,7 +124,7 @@ var managers;
         point2.y = enemy.image.y;
         if (distance(point1, point2) < ((bullet.height * 0.5) + (enemy.height * 0.5))) {
             createjs.Sound.play("explosionAudio");
-            scoreboard.score += 100;
+            constants.PLAYER_SCORE += 100;
             enemy.reset();
             bullet.bulletReset();
         }

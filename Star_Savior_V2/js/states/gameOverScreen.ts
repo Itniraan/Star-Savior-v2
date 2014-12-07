@@ -50,6 +50,8 @@ module states {
             game.removeAllChildren;
             game.removeAllEventListeners;
             stage.removeChild(game);
+            constants.PLAYER_LIVES = 3;
+            constants.PLAYER_SCORE = 0;
             currentState = constants.MENU_STATE;
             changeState(currentState);
         });

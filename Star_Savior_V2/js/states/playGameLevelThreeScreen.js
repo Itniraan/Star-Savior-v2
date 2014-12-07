@@ -20,7 +20,7 @@ var states;
     function playLevelThreeState() {
         crazySpace.update();
         star.update();
-        createjs.Sound.play('level3Soundtrack', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
+
         for (var count = 0; count < constants.ENEMY_NUM; count++) {
             enemies[count].update();
         }
@@ -34,8 +34,9 @@ var states;
         scoreboard.update();
 
         // If lives is 0 or lower, destroy all objects and go to gameover screen
-        if (scoreboard.lives <= 0) {
-            states.getHighScore(scoreboard.score);
+        if (constants.PLAYER_LIVES <= 0) {
+            states.getHighScore(constants.PLAYER_SCORE);
+            createjs.Sound.stop();
             stage.removeChild(game);
             plane.destroy();
             crazySpace.destroy();

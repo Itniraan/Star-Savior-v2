@@ -110,6 +110,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="js\constants.ts" />
     <TypeScriptCompile Include="js\managers\collision.ts" />
+    <TypeScriptCompile Include="js\objects\asteroid.ts" />
     <TypeScriptCompile Include="js\objects\bullet.ts" />
     <TypeScriptCompile Include="js\objects\enemy.ts" />
     <TypeScriptCompile Include="js\objects\label.ts" />
