@@ -7,7 +7,7 @@
 /// <reference path="../constants.ts" />
 /**
 File Name: label.ts
-Author: Blake Murdock
+Author: Blake Murdock and Mallory Steele
 Website Name: Label object class for Star Savior Side-Scrolling Arcade Game
 Purpose: This file contains all details to initalize a Label object
 */

@@ -1,7 +1,7 @@
 ﻿/// <reference path="../constants.ts" />
 /**
 File Name: scoreBoard.ts
-Author: Blake Murdock
+Author: Blake Murdock and Mallory Steele
 Website Name: Scorboard object class for Star Savior Side-Scrolling Arcade Game
 Purpose: This file contains all details to initalize a Scoreboard object
 */

@@ -3,7 +3,7 @@
 /// <reference path="../objects/lava.ts" />
 /**
 File Name: gameOver.ts
-Author: Blake Murdock
+Author: Blake Murdock and Mallory Steele
 Website Name: This is the game over screen state for Star Savior
 Purpose: This file contains all of the elements of the game over screen (high score, play again)
 */
@@ -78,4 +78,4 @@ var states;
     }
     states.getHighScore = getHighScore;
 })(states || (states = {}));
-//# sourceMappingURL=gameOverScreen.js.map
+//# sourceMappingURL=gameoverscreen.js.map

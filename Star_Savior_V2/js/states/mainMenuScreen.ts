@@ -3,7 +3,7 @@
 /// <reference path="../objects/label.ts" />
 /**
 File Name: mainMenuScreen.ts
-Author: Blake Murdock
+Author: Blake Murdock and Mallory Steele
 Website Name: This is the main menu screen state for Star Savior
 Purpose: This file contains all of the elements of the main menu screen (start game, instructions)
 */

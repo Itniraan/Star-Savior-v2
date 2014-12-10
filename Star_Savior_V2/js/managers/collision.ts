@@ -4,7 +4,7 @@
 /// <reference path="../objects/enemy.ts" />
 /**
 File Name: collision.ts
-Author: Blake Murdock
+Author: Blake Murdock and MAllory Steele
 Website Name: Collision class for Star Savior Side-Scrolling Arcade Game
 Purpose: This file contains the manager for all collisions between objects
 */

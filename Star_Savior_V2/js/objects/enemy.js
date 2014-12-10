@@ -1,6 +1,6 @@
 ﻿/**
 File Name: enemy.ts
-Author: Blake Murdock
+Author: Blake Murdock and Mallory Steele
 Website Name: Enemy object class for Star Savior Side-Scrolling Arcade Game
 Purpose: This file contains all details to initalize a enemy object
 */

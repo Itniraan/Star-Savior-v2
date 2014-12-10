@@ -1,6 +1,6 @@
 ﻿/**
 File Name: plane.ts
-Author: Blake Murdock
+Author: Blake Murdock and Mallory Steele
 Website Name: Plane object class for Star Savior Side-Scrolling Arcade Game
 Purpose: This file contains all details to initalize a plane object
 */
