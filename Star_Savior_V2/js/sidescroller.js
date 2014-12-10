@@ -27,6 +27,7 @@ var space;
 var crazySpace;
 var scoreboard;
 var bullet;
+var asteroid;
 
 // Enemy Array
 var enemies = [];
@@ -66,6 +67,7 @@ function preload() {
         { id: "enemy2", src: "assets/img/enemy2.png" },
         { id: "enemy3", src: "assets/img/enemy3.png" },
         { id: "bossMonster", src: "assets/img/bossMonster.png" },
+        { id: "asteroid", src: "assets/img/Asteroid.png" },
         // Button Assets
         { id: "playButton", src: "assets/img/playButton.png" },
         { id: "instructionsButton", src: "assets/img/instructionsButton.png" },
@@ -113,27 +115,27 @@ function changeState(state) {
             states.menu();
             break;
         case constants.PLAY_STATE_LEVEL_ONE:
-            // instantiate play screen
+            // instantiate play state level 1 screen
             currentStateFunction = states.playLevelOneState;
             states.playLevelOne();
             break;
         case constants.PLAY_STATE_LEVEL_TWO:
-            // instantiate play screen
+            // instantiate play state level 2 screen
             currentStateFunction = states.playLevelTwoState;
             states.playLevelTwo();
             break;
         case constants.PLAY_STATE_LEVEL_THREE:
-            // instantiate play screen
+            // instantiate play state level 3 screen
             currentStateFunction = states.playLevelThreeState;
             states.playLevelThree();
             break;
         case constants.FINAL_BOSS_STATE:
-            // instantiate play screen
+            // instantiate final boss screen
             currentStateFunction = states.finalBossState;
             states.playFinalBoss();
             break;
         case constants.WIN_STATE:
-            // instantiate play screen
+            // instantiate win screen
             currentStateFunction = states.winState;
             states.win();
             break;

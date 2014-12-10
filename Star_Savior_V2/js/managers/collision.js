@@ -4,7 +4,7 @@
 /// <reference path="../objects/enemy.ts" />
 /**
 File Name: collision.ts
-Author: Blake Murdock
+Author: Blake Murdock and MAllory Steele
 Website Name: Collision class for Star Savior Side-Scrolling Arcade Game
 Purpose: This file contains the manager for all collisions between objects
 */
@@ -131,5 +131,20 @@ var managers;
         ;
     }
     managers.bulletAndEnemy = bulletAndEnemy;
+
+    function planeAndAsteroid(asteroid) {
+        var p1 = new createjs.Point();
+        var p2 = new createjs.Point();
+        p1.x = plane.image.x;
+        p1.y = plane.image.y;
+        p2.x = asteroid.image.x;
+        p2.y = asteroid.image.y;
+        if (distance(p1, p2) <= ((plane.height * 0.5) + (asteroid.height * 0.5))) {
+            createjs.Sound.play("explosionAudio");
+            constants.PLAYER_LIVES -= 1;
+            asteroid.reset();
+        }
+    }
+    managers.planeAndAsteroid = planeAndAsteroid;
 })(managers || (managers = {}));
 //# sourceMappingURL=collision.js.map

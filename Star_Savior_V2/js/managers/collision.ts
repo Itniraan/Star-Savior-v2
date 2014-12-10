@@ -123,4 +123,20 @@ module managers {
         };
     }
 
+    export function planeAndAsteroid(asteroid: objects.Asteroid) {
+        var p1: createjs.Point = new createjs.Point();
+        var p2: createjs.Point = new createjs.Point();
+        p1.x = plane.image.x;
+        p1.y = plane.image.y;
+        p2.x = asteroid.image.x;
+        p2.y = asteroid.image.y;
+        if (distance(p1, p2) <= ((plane.height * 0.5) + (asteroid.height * 0.5))) {
+            createjs.Sound.play("explosionAudio");
+            constants.PLAYER_LIVES -= 1;
+            asteroid.reset();
+        }
+
+
+    }
+
 }

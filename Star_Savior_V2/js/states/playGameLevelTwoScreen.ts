@@ -28,6 +28,7 @@ module states {
         }
 
         plane.update();
+        asteroid.update();
         scoreboard.update();
 
         // If lives is 0 or lower, destroy all objects and go to gameover screen
@@ -87,6 +88,8 @@ module states {
         for (var count = 0; count < constants.ENEMY_NUM; count++) {
             enemies[count] = new objects.Enemy(stage, game);
         }
+
+        asteroid = new objects.Asteroid(stage, game);
 
         scoreboard = new objects.scoreBoard(stage, game);
 
