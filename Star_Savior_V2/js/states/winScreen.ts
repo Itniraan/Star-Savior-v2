@@ -57,7 +57,7 @@ module states {
         });
 
         // Add all objects to canvas
-        game.addChild(gameOverLabel);
+        game.addChild(gameWinLabel);
         game.addChild(finalScoreLabel);
         game.addChild(playAgainButton);
 
@@ -66,11 +66,6 @@ module states {
 
         stage.addChild(game);
         console.log(highScore);
-    }
-
-    // function to retrieve high score
-    export function getHighScore(score: number) {
-        highScore = score;
     }
 
 }
