@@ -16,6 +16,7 @@ module states {
     // main menu function, that sets up where everything is on the canvas, and the event listeners
     export function menu() {
         // Buttons
+        createjs.Sound.play('mainMenuSoundtrack', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
         var playButton: createjs.Bitmap;
         var instructionsButton: createjs.Bitmap;
         var okButton: createjs.Bitmap;
@@ -68,6 +69,7 @@ module states {
         });
         playButton.addEventListener("click", function () {
             // If play button is clicked, destory all objects and start game
+            createjs.Sound.stop();
             createjs.Sound.play('gameStartAudio');
 			createjs.Sound.play('level1Soundtrack', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
             lava.destroy();

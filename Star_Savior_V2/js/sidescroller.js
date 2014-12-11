@@ -60,6 +60,7 @@ function preload() {
         { id: "level2Soundtrack", src: "assets/audio/level2Soundtrack.mp3" },
         { id: "level3Soundtrack", src: "assets/audio/level3Soundtrack.mp3" },
         { id: "gameOverSoundtrack", src: "assets/audio/Nevermore.mp3" },
+        { id: "mainMenuSoundtrack", src: "assets/audio/mainMenu.mp3" },
         // Sprite Assets
         { id: "plane", src: "assets/img/Endymion_Sprite.png" },
         { id: "lava", src: "assets/img/lava-tileset.png" },
