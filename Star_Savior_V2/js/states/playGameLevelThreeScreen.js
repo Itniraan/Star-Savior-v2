@@ -57,6 +57,7 @@ var states;
         if (constants.PLAYER_SCORE == 3000) {
             states.getHighScore(constants.PLAYER_SCORE);
             createjs.Sound.stop();
+            createjs.Sound.play('gameWinSoundtrack', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
             plane.destroy();
             star.destroy();
             for (var count = 0; count < constants.ENEMY_NUM; count++) {

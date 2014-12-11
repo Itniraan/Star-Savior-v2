@@ -45,6 +45,7 @@ module states {
         playAgainButton.addEventListener("click", function () {
             // If play again button is clicked, destroy all objects and start new game
             crazySpace.destroy();
+            createjs.Sound.stop();
             game.removeAllChildren;
             game.removeAllEventListeners;
             stage.removeChild(game);

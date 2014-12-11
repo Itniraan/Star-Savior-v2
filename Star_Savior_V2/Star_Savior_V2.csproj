@@ -59,6 +59,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\audio\gameWin.mp3" />
     <Content Include="assets\audio\level1Soundtrack.mp3" />
     <Content Include="assets\audio\level2Soundtrack.mp3" />
     <Content Include="assets\audio\level3Soundtrack.mp3" />
