@@ -19,12 +19,14 @@ var objects;
             this.dx = 5;
 
             if (currentState != constants.MENU_STATE && currentState != constants.GAME_OVER_STATE) {
-                this.stage.addEventListener("click", function (e) {
-                    createjs.Sound.play("shootAudio");
-                    bullet = new objects.Bullet(stage, game);
-                    bullets.push(bullet);
-                    bullets[bullets.length - 1].fireBullet();
-                });
+                document.onkeydown = function (e) {
+                    if (event.keyCode == 32) {
+                        createjs.Sound.play("shootAudio");
+                        bullet = new objects.Bullet(stage, game);
+                        bullets.push(bullet);
+                        bullets[bullets.length - 1].fireBullet();
+                    }
+                };
             }
 
             game.addChild(this.image);

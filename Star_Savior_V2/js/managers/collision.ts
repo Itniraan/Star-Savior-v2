@@ -103,6 +103,14 @@ module managers {
                 bulletAndEnemy(enemies[count], bullets[i]);
             }
         };
+        if (currentState == constants.PLAY_STATE_LEVEL_TWO) {
+            planeAndAsteroid(asteroid);
+        };
+        if (currentState == constants.PLAY_STATE_LEVEL_THREE) {
+            for (var count = 0; count < constants.ASTEROID_NUM; count++) {
+                planeAndAsteroid(asteroids[count]);
+            }
+        };
     }
     
     // Check collision between bullet and enemy

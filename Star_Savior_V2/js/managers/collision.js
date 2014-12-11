@@ -109,6 +109,16 @@ var managers;
             }
         }
         ;
+        if (currentState == constants.PLAY_STATE_LEVEL_TWO) {
+            planeAndAsteroid(asteroid);
+        }
+        ;
+        if (currentState == constants.PLAY_STATE_LEVEL_THREE) {
+            for (var count = 0; count < constants.ASTEROID_NUM; count++) {
+                planeAndAsteroid(asteroids[count]);
+            }
+        }
+        ;
     }
     managers.collisionCheck = collisionCheck;
 

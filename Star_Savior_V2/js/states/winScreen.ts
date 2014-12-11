@@ -11,7 +11,7 @@ module states {
 
     // Game loop, update lava in background
     export function gameWinState() {
-        crazySpaceWin.update();
+        crazySpace.update();
     }
 
     // win function, that sets up where everything is on the canvas, and the event listeners
@@ -29,7 +29,7 @@ module states {
 
         // game and lava variables
         game = new createjs.Container();
-        crazySpaceWin = new objects.levelThreeBackground(stage, game);
+        crazySpace = new objects.levelThreeBackground(stage, game);
 
         // Set up where the new objects are on the canvas
         playAgainButton.x = stage.canvas.width / 4;

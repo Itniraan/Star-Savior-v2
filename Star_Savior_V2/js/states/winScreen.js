@@ -11,7 +11,7 @@ var states;
 (function (states) {
     // Game loop, update lava in background
     function gameWinState() {
-        crazySpaceWin.update();
+        crazySpace.update();
     }
     states.gameWinState = gameWinState;
 
@@ -31,7 +31,7 @@ var states;
 
         // game and lava variables
         game = new createjs.Container();
-        crazySpaceWin = new objects.levelThreeBackground(stage, game);
+        crazySpace = new objects.levelThreeBackground(stage, game);
 
         // Set up where the new objects are on the canvas
         playAgainButton.x = stage.canvas.width / 4;
