@@ -25,9 +25,9 @@ module objects {
 
             if (currentState != constants.MENU_STATE && currentState != constants.GAME_OVER_STATE) {
                 document.onkeydown = function (e) {
-                    if (event.keyCode == 32) {
+                    if (event.keyCode == constants.FIRING_KEY) {
                         createjs.Sound.play("shootAudio");
-                        bullet = new objects.Bullet(stage, game);
+                        bullet = new objects.Bullet(stage, game, 1);
                         bullets.push(bullet);
                         bullets[bullets.length - 1].fireBullet();
                     }

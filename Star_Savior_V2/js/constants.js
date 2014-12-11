@@ -24,5 +24,6 @@ var constants;
     constants.BULLET_SPEED = 5;
     constants.PLAYER_SCORE = 0;
     constants.PLAYER_LIVES = 3;
+    constants.FIRING_KEY = 32;
 })(constants || (constants = {}));
 //# sourceMappingURL=constants.js.map

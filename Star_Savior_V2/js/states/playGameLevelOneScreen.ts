@@ -35,6 +35,7 @@ module states {
         if (constants.PLAYER_LIVES <= 0) {
             states.getHighScore(constants.PLAYER_SCORE);
             createjs.Sound.stop();
+            createjs.Sound.play('gameOverSoundtrack', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
             stage.removeChild(game);
             plane.destroy();
             lava.destroy();
