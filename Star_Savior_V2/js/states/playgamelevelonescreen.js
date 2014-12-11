@@ -9,8 +9,9 @@
 /**
 File Name: playGameLevelOne.ts
 Author: Blake Murdock and Mallory Steele
-Website Name: This is the game play screen state for Star Savior
-Purpose: This file contains all of the elements of the game play screen
+Website Name: This is the game play level 1 screen state for Star Savior
+Purpose: This file contains all of the elements of the game play screen for
+level one of the game
 */
 var states;
 (function (states) {
@@ -51,7 +52,7 @@ var states;
             changeState(currentState);
         }
 
-        if (constants.PLAYER_SCORE == 500) {
+        if (constants.PLAYER_SCORE == 1500) {
             createjs.Sound.stop();
             createjs.Sound.play('level2Soundtrack', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
             lava.destroy();
@@ -100,4 +101,4 @@ var states;
     }
     states.playLevelOne = playLevelOne;
 })(states || (states = {}));
-//# sourceMappingURL=playGameLevelOneScreen.js.map
+//# sourceMappingURL=playgamelevelonescreen.js.map

@@ -1,4 +1,11 @@
-﻿module states {
+﻿/**
+File Name: finalBossScreen.ts
+Author: Blake Murdock and Mallory Steele
+Website Name: This is the final boss screen state for Star Savior
+Purpose: This file contains all of the elements of the final boss 
+fight screen
+*/
+module states {
     var finalBossText: createjs.Text;
     export function finalBossState() {
         crazySpace.update();

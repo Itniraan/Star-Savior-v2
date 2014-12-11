@@ -18,20 +18,15 @@ var objects;
             this.image.regY = this.height * 0.5;
             this.dx = 5;
 
-            if (currentState != constants.MENU_STATE && currentState != constants.GAME_OVER_STATE) {
-                document.onkeydown = function (e) {
-                    if (event.keyCode == constants.FIRING_KEY) {
-                        createjs.Sound.play("shootAudio");
-                        bullet = new objects.Bullet(stage, game, 1);
-                        bullets.push(bullet);
-                        bullets[bullets.length - 1].fireBullet();
-                    }
-                };
-            }
-
+            document.onkeydown = function (e) {
+                if (event.keyCode == constants.FIRING_KEY) {
+                    createjs.Sound.play("shootAudio");
+                    bullet = new objects.Bullet(stage, game, 1);
+                    bullets.push(bullet);
+                    bullets[bullets.length - 1].fireBullet();
+                }
+            };
             game.addChild(this.image);
-            // Play engine sound forever
-            //createjs.Sound.play("engine", 0, 0, 0, -1, 1, 0);
         }
         // Function to update position of plane.
         Plane.prototype.update = function () {

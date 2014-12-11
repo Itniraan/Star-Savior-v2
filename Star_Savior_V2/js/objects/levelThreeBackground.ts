@@ -30,17 +30,17 @@ module objects {
             this.reset2();
         }
 
-        // Function to reset position of first lava image.
+        // Function to reset position of first space image.
         reset1() {
             this.image.x = 628;
         }
 
-        // Function to reset position of second lava image.
+        // Function to reset position of second space image.
         reset2() {
             this.image2.x = 0;
         }
 
-        // Function to update position of lava.
+        // Function to update position of space.
         update() {
             this.image.x -= this.dx;
             this.image2.x -= this.dx;
@@ -52,7 +52,7 @@ module objects {
             }
         }
 
-        // Function to destroy lava object.
+        // Function to destroy space object.
         destroy() {
             this.game.removeChild(this.image);
             this.game.removeChild(this.image2);

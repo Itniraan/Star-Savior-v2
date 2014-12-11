@@ -22,17 +22,17 @@ var objects;
             this.reset1();
             this.reset2();
         }
-        // Function to reset position of first lava image.
+        // Function to reset position of first space image.
         levelThreeBackground.prototype.reset1 = function () {
             this.image.x = 628;
         };
 
-        // Function to reset position of second lava image.
+        // Function to reset position of second space image.
         levelThreeBackground.prototype.reset2 = function () {
             this.image2.x = 0;
         };
 
-        // Function to update position of lava.
+        // Function to update position of space.
         levelThreeBackground.prototype.update = function () {
             this.image.x -= this.dx;
             this.image2.x -= this.dx;
@@ -44,7 +44,7 @@ var objects;
             }
         };
 
-        // Function to destroy lava object.
+        // Function to destroy space object.
         levelThreeBackground.prototype.destroy = function () {
             this.game.removeChild(this.image);
             this.game.removeChild(this.image2);

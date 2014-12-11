@@ -9,8 +9,9 @@
 /**
 File Name: playGameLevelOne.ts
 Author: Blake Murdock and Mallory Steele
-Website Name: This is the game play screen state for Star Savior
-Purpose: This file contains all of the elements of the game play screen
+Website Name: This is the game play level 1 screen state for Star Savior
+Purpose: This file contains all of the elements of the game play screen for 
+level one of the game
 */
 module states {
     var levelOneText: createjs.Text;
@@ -49,7 +50,7 @@ module states {
             changeState(currentState);
         }
 
-        if (constants.PLAYER_SCORE == 500) {
+        if (constants.PLAYER_SCORE == 1500) {
             createjs.Sound.stop();
             createjs.Sound.play('level2Soundtrack', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
             lava.destroy();
@@ -67,7 +68,7 @@ module states {
     // play state Function
     export function playLevelOne(): void {
         game = new createjs.Container();
-        // Set mouse cursor to none (avatar will take place of cursor
+        // Set mouse cursor to none (avatar will take place of cursor)
         stage.cursor = "none";
         lava = new objects.Lava(stage, game);
         star = new objects.Star(stage, game);

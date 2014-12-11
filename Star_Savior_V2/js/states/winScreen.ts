@@ -27,7 +27,7 @@ module states {
         var playAgainButton: createjs.Bitmap;
         playAgainButton = new createjs.Bitmap(queue.getResult("playAgainButton"));
 
-        // game and lava variables
+        // game and crazySpace variables
         game = new createjs.Container();
         crazySpace = new objects.levelThreeBackground(stage, game);
 
@@ -63,7 +63,7 @@ module states {
         stage.cursor = "default";
 
         stage.addChild(game);
-        console.log(constants.PLAYER_SCORE);
+        //console.log(constants.PLAYER_SCORE);
     }
 
 }

@@ -24,13 +24,13 @@ module objects {
             game.addChild(this.image);
             this.reset();
         }
-        // Function to reset enemy off screen
+        // Function to reset final boss
         reset() {
             this.image.x = 1500;
             this.image.y = Math.floor(Math.random() * stage.canvas.height);
             this.dx = Math.floor(Math.random() * 5 + 5);
         }
-        // Function to update position of enemy.
+        // Function to update position of final boss.
         update() {
             while (this.image.y > 471) {
                 this.image.y -= this.dx;
@@ -47,7 +47,7 @@ module objects {
                 bossBullets[bossBullets.length - 1].fireBullet();
             }
         }
-        // Function to remove enemy from the game
+        // Function to remove final boss from the game
         destroy() {
             game.removeChild(this.image);
         }

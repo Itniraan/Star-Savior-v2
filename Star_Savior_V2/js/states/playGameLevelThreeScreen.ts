@@ -9,8 +9,9 @@
 /**
 File Name: playGameLevelThree.ts
 Author: Blake Murdock and Mallory Steele
-Website Name: This is the game play screen state for Star Savior
-Purpose: This file contains all of the elements of the game play screen
+Website Name: This is the game play level 3 screen state for Star Savior
+Purpose: This file contains all of the elements of the game play screen for 
+level three of the game
 */
 module states {
     var levelThreeText: createjs.Text;
@@ -52,7 +53,7 @@ module states {
             changeState(currentState);
         }
 
-        if (constants.PLAYER_SCORE == 3000) {
+        if (constants.PLAYER_SCORE == 4000) {
             states.getHighScore(constants.PLAYER_SCORE);
             createjs.Sound.stop();
             createjs.Sound.play('gameWinSoundtrack', createjs.Sound.INTERRUPT_NONE, 0, 0, -1, 1, 0);
@@ -74,7 +75,7 @@ module states {
     // play state Function
     export function playLevelThree(): void {
         game = new createjs.Container();
-        // Set mouse cursor to none (avatar will take place of cursor
+        // Set mouse cursor to none (avatar will take place of cursor)
         stage.cursor = "none";
         crazySpace = new objects.levelThreeBackground(stage, game);
         star = new objects.Star(stage, game);
