@@ -23,7 +23,8 @@ module states {
         // Text and labels
         var instructionsMessage: string = "In this game, your objective is to avoid the enemy fighters, " 
             + "and save the stars that have been trapped in a volcano. Gain another life "
-            + "everytime you win 1000 points, up to 5000 points. See how many points you can get!";
+            + "everytime you win 1000 points, up to 5000 points. Watch out for asteroids on levels two and "
+            + "three, they can't be destroyed! Make it to 3000 points to win the game!";
         var instructionsText: createjs.Text;
         var welcomeMessage: string = "Welcome to Star Savior!";
         var welcomeText: createjs.Text;
@@ -41,7 +42,7 @@ module states {
 
         // Set up where the new objects are on the canvas
         okButton.x = 284;
-        okButton.y = 350;
+        okButton.y = 370;
         okButton.visible = false;
         playButton.x = stage.canvas.width / 4;
         playButton.y = 200;

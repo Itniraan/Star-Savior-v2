@@ -30,6 +30,7 @@ var star: objects.Star;
 var lava: objects.Lava;
 var space: objects.levelTwoBackground;
 var crazySpace: objects.levelThreeBackground;
+var crazySpaceWin: objects.levelThreeBackground;
 var scoreboard: objects.scoreBoard;
 var bullet: objects.Bullet;
 var asteroid: objects.Asteroid;
@@ -37,6 +38,7 @@ var asteroid: objects.Asteroid;
 // Enemy Array
 var enemies = [];
 var bullets = [];
+var asteroids = [];
 
 // State variables
 var currentState: number;
@@ -140,8 +142,8 @@ function changeState(state: number): void {
             break;
         case constants.WIN_STATE:
             // instantiate win screen
-            currentStateFunction = states.winState;
-            states.win();
+            currentStateFunction = states.gameWinState();
+            states.gameWin();
             break;
         case constants.GAME_OVER_STATE:
             currentStateFunction = states.gameOverState;

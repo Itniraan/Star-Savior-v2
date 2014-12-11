@@ -36,7 +36,7 @@ module objects {
                 this.bulletReset();
             }
         }
-
+            
         // Function to reset bullet off screen, and destroy it
         bulletReset() {
             this.image.y = 700;

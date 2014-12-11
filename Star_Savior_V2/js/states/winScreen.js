@@ -2,19 +2,16 @@
 /// <reference path="../objects/label.ts" />
 /// <reference path="../objects/lava.ts" />
 /**
-File Name: gameOver.ts
+File Name: winScreen.ts
 Author: Blake Murdock and Mallory Steele
 Website Name: This is the game win screen state for Star Savior
 Purpose: This file contains all of the elements of the game win screen (high score, play again)
 */
 var states;
 (function (states) {
-    // variable to keep high score in
-    var highScore = 0;
-
     // Game loop, update lava in background
     function gameWinState() {
-        lava.update();
+        crazySpaceWin.update();
     }
     states.gameWinState = gameWinState;
 
@@ -23,7 +20,7 @@ var states;
         // Text and labels
         var gameWinMessage = "Wow you kicked butt! You win!!";
         var gameWinLabel;
-        var finalScoreMessage = "Your final score was: " + highScore.toString();
+        var finalScoreMessage = "Your final score was: " + constants.PLAYER_SCORE.toString();
         var finalScoreLabel;
         gameWinLabel = new objects.Label(300, 100, gameWinMessage);
         finalScoreLabel = new objects.Label(300, 200, finalScoreMessage);
@@ -34,7 +31,7 @@ var states;
 
         // game and lava variables
         game = new createjs.Container();
-        lava = new objects.Lava(stage, game);
+        crazySpaceWin = new objects.levelThreeBackground(stage, game);
 
         // Set up where the new objects are on the canvas
         playAgainButton.x = stage.canvas.width / 4;
@@ -49,7 +46,7 @@ var states;
         });
         playAgainButton.addEventListener("click", function () {
             // If play again button is clicked, destroy all objects and start new game
-            lava.destroy();
+            crazySpace.destroy();
             game.removeAllChildren;
             game.removeAllEventListeners;
             stage.removeChild(game);
@@ -68,7 +65,7 @@ var states;
         stage.cursor = "default";
 
         stage.addChild(game);
-        console.log(highScore);
+        console.log(constants.PLAYER_SCORE);
     }
     states.gameWin = gameWin;
 })(states || (states = {}));

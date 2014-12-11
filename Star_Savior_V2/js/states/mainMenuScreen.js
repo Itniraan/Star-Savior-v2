@@ -23,7 +23,7 @@ var states;
         var okButton;
 
         // Text and labels
-        var instructionsMessage = "In this game, your objective is to avoid the enemy fighters, " + "and save the stars that have been trapped in a volcano. Gain another life " + "everytime you win 1000 points, up to 5000 points. See how many points you can get!";
+        var instructionsMessage = "In this game, your objective is to avoid the enemy fighters, " + "and save the stars that have been trapped in a volcano. Gain another life " + "everytime you win 1000 points, up to 5000 points. Watch out for asteroids on levels two and " + "three, they can't be destroyed! Make it to 3000 points to win the game!";
         var instructionsText;
         var welcomeMessage = "Welcome to Star Savior!";
         var welcomeText;
@@ -41,7 +41,7 @@ var states;
 
         // Set up where the new objects are on the canvas
         okButton.x = 284;
-        okButton.y = 350;
+        okButton.y = 370;
         okButton.visible = false;
         playButton.x = stage.canvas.width / 4;
         playButton.y = 200;

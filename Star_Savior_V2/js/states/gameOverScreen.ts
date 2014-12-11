@@ -1,6 +1,5 @@
 ﻿/// <reference path="../constants.ts" />
 /// <reference path="../objects/label.ts" />
-/// <reference path="../objects/lava.ts" />
 /**
 File Name: gameOver.ts
 Author: Blake Murdock and Mallory Steele

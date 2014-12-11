@@ -2,18 +2,16 @@
 /// <reference path="../objects/label.ts" />
 /// <reference path="../objects/lava.ts" />
 /**
-File Name: gameOver.ts
+File Name: winScreen.ts
 Author: Blake Murdock and Mallory Steele
 Website Name: This is the game win screen state for Star Savior
 Purpose: This file contains all of the elements of the game win screen (high score, play again)
 */
 module states {
-    // variable to keep high score in
-    var highScore: number = 0;
 
     // Game loop, update lava in background
     export function gameWinState() {
-        lava.update();
+        crazySpaceWin.update();
     }
 
     // win function, that sets up where everything is on the canvas, and the event listeners
@@ -21,7 +19,7 @@ module states {
         // Text and labels
         var gameWinMessage: string = "Wow you kicked butt! You win!!";
         var gameWinLabel: objects.Label;
-        var finalScoreMessage: string = "Your final score was: " + highScore.toString();
+        var finalScoreMessage: string = "Your final score was: " + constants.PLAYER_SCORE.toString();
         var finalScoreLabel: objects.Label;
         gameWinLabel = new objects.Label(300, 100, gameWinMessage);
         finalScoreLabel = new objects.Label(300, 200, finalScoreMessage);
@@ -31,7 +29,7 @@ module states {
 
         // game and lava variables
         game = new createjs.Container();
-        lava = new objects.Lava(stage, game);
+        crazySpaceWin = new objects.levelThreeBackground(stage, game);
 
         // Set up where the new objects are on the canvas
         playAgainButton.x = stage.canvas.width / 4;
@@ -46,7 +44,7 @@ module states {
         });
         playAgainButton.addEventListener("click", function () {
             // If play again button is clicked, destroy all objects and start new game
-            lava.destroy();
+            crazySpace.destroy();
             game.removeAllChildren;
             game.removeAllEventListeners;
             stage.removeChild(game);
@@ -60,12 +58,11 @@ module states {
         game.addChild(gameWinLabel);
         game.addChild(finalScoreLabel);
         game.addChild(playAgainButton);
-
         // Set mouse cursor to default cursor
         stage.cursor = "default";
 
         stage.addChild(game);
-        console.log(highScore);
+        console.log(constants.PLAYER_SCORE);
     }
 
 }

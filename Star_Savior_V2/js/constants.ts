@@ -15,6 +15,7 @@ module constants {
     export var GAME_OVER_STATE: number = 6;
     // Game Constants
     export var ENEMY_NUM: number = 3;
+    export var ASTEROID_NUM: number = 3;
     export var LABEL_FONT = "30px Consolas";
     export var LABEL_COLOUR = "#FFFFFF";
     export var PLAYER_LIVES = 3;

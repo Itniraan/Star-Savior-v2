@@ -17,6 +17,7 @@ var constants;
 
     // Game Constants
     constants.ENEMY_NUM = 3;
+    constants.ASTEROID_NUM = 3;
     constants.LABEL_FONT = "30px Consolas";
     constants.LABEL_COLOUR = "#FFFFFF";
     constants.PLAYER_LIVES = 3;

@@ -22,6 +22,9 @@ module states {
         for (var count = 0; count < constants.ENEMY_NUM; count++) {
             enemies[count].update();
         }
+        for (var count = 0; count < constants.ASTEROID_NUM; count++) {
+            asteroids[count].update();
+        }
         managers.collisionCheck();
         //console.log(managers.collisionCheck());
         for (var i = 0; i < bullets.length; i++) {
@@ -45,6 +48,23 @@ module states {
             stage.removeChild(game);
 
             currentState = constants.GAME_OVER_STATE;
+            changeState(currentState);
+        }
+
+        if (constants.PLAYER_SCORE == 3000) {
+            states.getHighScore(constants.PLAYER_SCORE);
+            createjs.Sound.stop();
+            plane.destroy();
+            star.destroy();
+            for (var count = 0; count < constants.ENEMY_NUM; count++) {
+                enemies[count].destroy();
+            }
+
+            game.removeAllChildren();
+            game.removeAllEventListeners();
+            stage.removeChild(game);
+
+            currentState = constants.WIN_STATE;
             changeState(currentState);
         }
     }
@@ -72,6 +92,10 @@ module states {
 
         for (var count = 0; count < constants.ENEMY_NUM; count++) {
             enemies[count] = new objects.Enemy(stage, game);
+        }
+
+        for (var count = 0; count < constants.ASTEROID_NUM; count++) {
+            asteroids[count] = new objects.Asteroid(stage, game);
         }
 
         scoreboard = new objects.scoreBoard(stage, game);
