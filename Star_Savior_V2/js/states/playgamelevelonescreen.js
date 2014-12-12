@@ -72,7 +72,7 @@ var states;
     function playLevelOne() {
         game = new createjs.Container();
 
-        // Set mouse cursor to none (avatar will take place of cursor
+        // Set mouse cursor to none (avatar will take place of cursor)
         stage.cursor = "none";
         lava = new objects.Lava(stage, game);
         star = new objects.Star(stage, game);
@@ -101,4 +101,4 @@ var states;
     }
     states.playLevelOne = playLevelOne;
 })(states || (states = {}));
-//# sourceMappingURL=playgamelevelonescreen.js.map
+//# sourceMappingURL=playGameLevelOneScreen.js.map

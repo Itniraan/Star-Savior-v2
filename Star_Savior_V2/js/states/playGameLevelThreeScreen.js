@@ -79,7 +79,7 @@ var states;
     function playLevelThree() {
         game = new createjs.Container();
 
-        // Set mouse cursor to none (avatar will take place of cursor
+        // Set mouse cursor to none (avatar will take place of cursor)
         stage.cursor = "none";
         crazySpace = new objects.levelThreeBackground(stage, game);
         star = new objects.Star(stage, game);

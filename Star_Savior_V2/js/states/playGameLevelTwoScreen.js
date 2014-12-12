@@ -72,7 +72,7 @@ var states;
     function playLevelTwo() {
         game = new createjs.Container();
 
-        // Set mouse cursor to none (avatar will take place of cursor
+        // Set mouse cursor to none (avatar will take place of cursor)
         stage.cursor = "none";
         space = new objects.levelTwoBackground(stage, game);
         star = new objects.Star(stage, game);
